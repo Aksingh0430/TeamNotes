@@ -1,0 +1,115 @@
+/* client/src/styles.css - simple professional styling */
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --muted:#68707d;
+  --accent:#0f62fe;
+  --border:#e6e9ee;
+  --radius:10px;
+  --pad:14px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.app-shell{
+  max-width:1100px;
+  margin:28px auto;
+  padding:18px;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 18px;
+  background:linear-gradient(90deg, rgba(15,98,254,0.06), rgba(15,98,254,0.02));
+  border-radius:12px;
+  margin-bottom:18px;
+  border:1px solid var(--border);
+}
+
+.header a{ color:var(--accent); font-weight:600; text-decoration:none; }
+
+.layout{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:20px;
+}
+
+/* notes sidebar */
+.notes-list{
+  background:var(--card);
+  padding:var(--pad);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  height:calc(100vh - 180px);
+  overflow:auto;
+}
+
+.note-item{
+  padding:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-radius:8px;
+  cursor:pointer;
+  margin-bottom:8px;
+  transition: background .12s;
+}
+
+.note-item:hover{ background:#f3f6fb; }
+
+.note-item .meta{ color:var(--muted); font-size:12px; }
+
+.note-item .title{ font-weight:600; margin-bottom:4px; }
+
+/* editor panel */
+.editor{
+  background:var(--card);
+  padding:var(--pad);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  min-height:400px;
+}
+
+.input, textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:10px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  margin-bottom:8px;
+  font-size:14px;
+  background:#fff;
+}
+
+.button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  margin-right:8px;
+}
+
+.button.secondary{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--accent);
+}
+
+.small{
+  font-size:13px;
+  padding:6px 8px;
+}
+
+.controls{ display:flex; gap:8px; margin-top:10px; align-items:center; }

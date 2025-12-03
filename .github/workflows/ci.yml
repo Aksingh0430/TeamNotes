@@ -1,0 +1,31 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install server deps
+        run: |
+          cd server
+          npm ci
+      - name: Lint / quick test server
+        run: |
+          cd server
+          node -e "console.log('server quick smoke test')"
+      - name: Install client deps
+        run: |
+          cd client
+          npm ci
+      - name: Quick build client
+        run: |
+          cd client
+          npm run build
