@@ -1,25 +1,73 @@
-# TeamNotes
+# 📝 TeamNotes
 
-Collaborative Notes & Tasks Platform — React frontend, Node/Express backend, PostgreSQL, JWT auth.
+### Collaborative Notes & Tasks Platform
 
-## Quickstart
+TeamNotes is a full-stack web application designed for managing notes and tasks in a collaborative environment.
 
-1. Unzip both packages and install dependencies
+The application uses a **React frontend**, **Node.js/Express backend**, **PostgreSQL database**, and **JWT-based authentication** to provide a secure and structured platform for managing application data.
 
-### Server
-```bash
-cd server
-npm install
-# configure .env with DATABASE_URL and JWT_SECRET
-node index.js
-```
+---
 
-### Client
-```bash
-cd client
-npm install
-npm run dev
-```
+## 🚀 Tech Stack
 
-Default server: http://localhost:4000
-Default client (Vite): http://localhost:5173
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+### Backend
+- Node.js
+- Express.js
+- REST API
+
+### Database
+- PostgreSQL
+
+### Authentication
+- JSON Web Tokens (JWT)
+
+### Development Tools
+- Git
+- GitHub
+- npm
+- Postman
+
+---
+
+## ✨ Key Features
+
+- 🔐 JWT-based authentication
+- 📝 Notes management
+- ✅ Task management
+- 👥 Collaborative platform
+- 🔗 RESTful backend APIs
+- 🗄️ PostgreSQL database integration
+- ⚡ React-based frontend
+- 🛡️ Secure API access through authentication
+- ⚠️ Input validation and error handling
+
+---
+
+## 📁 Project Structure
+
+```text
+TeamNotes/
+│
+├── client/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── ...
+│
+├── server/
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│   ├── middleware/
+│   ├── package.json
+│   └── ...
+│
+├── README.md
+└── ...
